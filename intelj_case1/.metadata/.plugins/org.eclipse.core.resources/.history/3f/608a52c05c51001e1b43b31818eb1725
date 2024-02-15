@@ -1,0 +1,46 @@
+package com.certificate.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.certificate.model.Certificate;
+import com.certificate.repo.CerRepository;
+
+@Service
+public class CerService {
+
+	@Autowired
+	private CerRepository repo;
+	
+	
+	public List<Certificate> getAllcert() {
+		return 	repo.findAll();
+		
+	}
+	
+	public Certificate getByName( String cerName) {
+		return repo.findById(cerName).get();
+	}
+	
+	public Certificate addCer( Certificate cer) {
+		return repo.save(cer);
+	}
+	
+	//to delete the certificate
+	public String deleteByName(String cerName) {
+		repo.deleteById(cerName);
+		return "deleted";
+
+	}
+	
+	//to update the certificate
+	public Certificate updateCert(Certificate cer) {
+		repo.save(cer);
+		return cer;
+	}
+
+	
+	
+}

@@ -1,0 +1,116 @@
+package com.certificate.model;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
+public class Certificate {
+	
+        @Id
+        private String cerName;
+	    private int criticality;
+	    private long validity;
+	    private long cost;
+	    private String vendor;
+	    private int score;
+	    
+	    
+		public Certificate(String cerName, int criticality, long validity, long cost, String vendor, int score) {
+			super();
+			this.cerName = cerName;
+			this.criticality = criticality;
+			this.validity = validity;
+			this.cost = cost;
+			this.vendor = vendor;
+			this.score = score;
+		}
+
+
+		public String getCerName() {
+			return cerName;
+		}
+
+
+		public void setCerName(String cerName) {
+			this.cerName = cerName;
+		}
+
+
+		public int getCriticality() {
+			return criticality;
+		}
+
+
+		public void setCriticality(int criticality) {
+			this.criticality = criticality;
+		}
+
+
+		public long getValidity() {
+			return validity;
+		}
+
+
+		public void setValidity(long validity) {
+			this.validity = validity;
+		}
+
+
+		public long getCost() {
+			return cost;
+		}
+
+
+		public void setCost(long cost) {
+			this.cost = cost;
+		}
+
+
+		public String getVendor() {
+			return vendor;
+		}
+
+
+		public void setVendor(String vendor) {
+			this.vendor = vendor;
+		}
+
+
+		public int getScore() {
+			return score;
+		}
+
+
+		public void setScore(int score) {
+			this.score = score;
+		}
+
+
+		@Override
+		public String toString() {
+			return "Certification [cerName=" + cerName + ", criticality=" + criticality + ", validity=" + validity
+					+ ", cost=" + cost + ", vendor=" + vendor + ", score=" + score + "]";
+		}
+
+
+		public Certificate() {
+			super();
+			// TODO Auto-generated constructor stub
+		}
+	    
+	    
+	    // Getters and setters
+		
+		
+	    
+	    
+	    
+		
+		
+
+	    
+	    
+	
+
+
+}

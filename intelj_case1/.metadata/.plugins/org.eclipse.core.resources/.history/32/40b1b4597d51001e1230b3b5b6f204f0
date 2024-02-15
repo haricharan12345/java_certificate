@@ -1,0 +1,40 @@
+package com.certificate.exception;
+
+public class CertificateException extends RuntimeException {
+
+    public CertificateException(String message) {
+        super(message);
+    }
+
+    public CertificateException(String message, Throwable cause) {
+        super(message, cause);
+    }
+}
+
+public class CertificateNotFoundException extends CertificateServiceException {
+
+    public CertificateNotFoundException(String message) {
+        super(message);
+    }
+}
+
+public class CertificateAddException extends CertificateServiceException {
+
+    public CertificateAddException(String message) {
+        super(message);
+    }
+}
+
+public class CertificateDeleteException extends CertificateServiceException {
+
+    public CertificateDeleteException(String message) {
+        super(message);
+    }
+}
+
+public class CertificateUpdateException extends CertificateServiceException {
+
+    public CertificateUpdateException(String message) {
+        super(message);
+    }
+}

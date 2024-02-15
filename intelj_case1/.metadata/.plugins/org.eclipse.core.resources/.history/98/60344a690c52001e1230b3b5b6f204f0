@@ -1,0 +1,17 @@
+package com.certificate.exception;
+
+
+public class ddd extends RuntimeException {
+	public ddd(String message) {
+        super(message);
+    }
+
+    public ddd(String message, Throwable cause) {
+        super(message, cause);
+    }
+}
+
+
+
+
+

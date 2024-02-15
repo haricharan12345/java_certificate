@@ -1,0 +1,18 @@
+package com.certificate.model;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
+public class Certificate {
+	
+        @Id
+        private String cerName;
+	    private int criticality;
+	    private long validity;
+	    private long cost;
+	    private String vendor;
+	    private int score;
+	    
+
+}
